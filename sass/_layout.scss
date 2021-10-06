@@ -1,0 +1,93 @@
+.container{
+ max-width:120rem;
+ margin:8rem auto;
+ box-shadow:var(--shadow-dark);
+ background-color:var(--color-grey-light-1);
+	
+ @media only screen and (max-width:$bp-largest){
+  margin:0;
+ }
+ 
+ @media only screen and (max-width:$bp-large){
+  max-width:100%;
+ }
+}
+
+.header{
+	background-color:#fff;
+	height:7rem;//notice here we do give fixed height to header and this container does not have height defined by its content
+			    //this is to give the stretch effect to the user nav items
+	border-bottom:var(--line);
+	
+	display:flex;
+	justify-content:space-between;
+	align-items:center;
+	
+	font-size:1.4rem;
+	
+	@media only screen and (max-width:$bp-smallest){
+	 flex-wrap:wrap;
+	 height:11rem;
+	 align-content:space-around;
+	}
+}
+
+.content{
+ display:flex;
+ 
+ @media only screen and (max-width:$bp-medium){
+  flex-direction:column;
+ }
+}
+
+.sidebar{
+  background-color:var(--color-grey-dark-1);
+  flex: 0 0 18%;
+}
+
+.hotel-view{
+ flex:1;
+ background-color:#fff;
+}
+
+.detail{
+ font-size:1.4rem;
+ background-color:var(--color-grey-light-1);
+ padding:4.5rem;
+ display:flex;
+ border-bottom:var(--line);
+ 
+ @media only screen and (max-width:$bp-medium){
+  padding:3rem;
+ }
+ 
+ @media only screen and (max-width:$bp-small){
+  flex-direction:column;  
+ }
+}
+
+.description{
+ padding:3rem;
+ background-color:#fff;
+ margin-right:4.5rem;
+ flex:0 0 60%;//notice that when the flex-basis is in percentage no need to set grow or shrink since percentage is already responsive
+ box-shadow:var(--shadow-light);
+
+ @media only screen and (max-width:$bp-medium){
+  padding:2rem;
+  margin-right:3rem;
+ }
+ 
+ @media only screen and (max-width:$bp-small){
+  margin-right:0;
+  margin-bottom:3rem;
+ }
+}
+
+.reviews{
+ flex:1;
+ 
+ display:flex;
+ flex-direction:column;
+ align-items:center;
+}
